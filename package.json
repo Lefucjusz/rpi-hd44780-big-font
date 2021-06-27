@@ -1,0 +1,14 @@
+{
+  "name": "big-font",
+  "version": "1.0.0",
+  "description": "Big font on HD44780-compatible 20x2 VFD display",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ./src/index.js"
+  },
+  "author": "Lefucjusz",
+  "license": "MIT",
+  "dependencies": {
+    "rpio": "^2.4.2"
+  }
+}
