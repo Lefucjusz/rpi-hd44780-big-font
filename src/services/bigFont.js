@@ -70,6 +70,17 @@ const bigFont = {
             char = char - this.capitalAInASCII + this.capitalAInCharGlyphs;
         } else if(char >= this.smallAInASCII && char <= this.smallZInASCII) {
             char = char - this.smallAInASCII + this.smallAInCharGlyphs;
+        } else {
+            switch(char) {
+                case ':':
+                    HD44780.goToPosition(1, position);
+                    HD44780.sendChar(0x49);
+                    HD44780.goToPosition(2, position);
+                    HD44780.sendChar(0x49);
+                    break;
+                default:
+                    console.log('No such char!');
+            }
         }
 
         const selectedCharGlyphs = this.charGlyphs[char];
