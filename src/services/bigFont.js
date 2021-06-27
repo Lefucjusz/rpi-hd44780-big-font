@@ -72,11 +72,12 @@ const bigFont = {
             char = char - this.smallAInASCII + this.smallAInCharGlyphs;
         } else {
             switch(char) {
-                case ':':
+                case 0x3A:
                     HD44780.goToPosition(1, position);
-                    HD44780.sendChar(0x49);
+                    HD44780.sendChar(0x96); // Big dot
                     HD44780.goToPosition(2, position);
-                    HD44780.sendChar(0x49);
+                    HD44780.sendChar(0x96); // Big dot
+		    return;
                     break;
                 default:
                     console.log('No such char!');

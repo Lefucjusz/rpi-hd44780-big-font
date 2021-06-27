@@ -11,8 +11,10 @@ function start() {
 
 		bigFont.writeChar(1, hours[0]);
 		bigFont.writeChar(4, hours[1]);
+		bigFont.writeChar(7, ':');
 		bigFont.writeChar(8, minutes[0]);
 		bigFont.writeChar(11, minutes[1]);
+		bigFont.writeChar(14, ':');
 		bigFont.writeChar(15, seconds[0]);
 		bigFont.writeChar(18, seconds[1]);
 	}, 500);
